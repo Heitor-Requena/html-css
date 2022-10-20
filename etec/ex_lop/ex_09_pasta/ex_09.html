@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ex_09</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h2>Sabores de Pizza</h2>
+            <ul>
+                <li>Muzarela R$25,00</li>
+                <li>Calabresa R$30,00</li>
+            </ul>
+        </div>
+        <script>
+            var sabor = "";
+            var quant = preco = 0;
+            var sabor = prompt("Escolha o sabro da pizza: ", "");
+            var quant = parseInt(prompt("Quantidade de pizzas: ", 0));
+            if (sabor == "Calabresa"){
+                preco = quant*30;
+            }
+            else if (sabor == "Muzarela"){
+                preco = quant*25;
+            }
+            document.write("O preço total a pagar é de R$"+preco);
+        </script>
+    </body>
+</html>

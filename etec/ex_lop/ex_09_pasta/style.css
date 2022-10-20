@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div{
+    background-color: lemonchiffon;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px goldenrod;
+}
+
+h2{
+    text-align: center;
+    color: brown;
+}

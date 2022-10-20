@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_011</title>
+    <script type="text/javascript">
+        var nome = "";
+            repet = "s"
+            ldl = 0;
+            tot_o = tot_d = tot_l = tot_a = tot_ma = 0;
+            while (repet == "s" || repet == "S"){
+                nome = prompt("Digite seu nome: ","");
+                ldl = parseInt(prompt("Digite seu LDL: ",""));
+                if (ldl <= 100){
+                    document.write("Paciente: "+nome+"<br>");
+                    document.write("LDL: "+ldl+"<br>");
+                    document.write("Nível de LDL: Ótimo"+"<hr>");
+                    tot_o += 1;
+                }
+                else if (100 < ldl && ldl <= 129){
+                    document.write("Paciente: "+nome+"<br>");
+                    document.write("LDL: "+ldl+"<br>");
+                    document.write("Nível de LDL: Desejável"+"<hr>");
+                    tot_d += 1;
+                }
+                else if (129 < ldl && ldl <= 159){
+                    document.write("Paciente: "+nome+"<br>");
+                    document.write("LDL: "+ldl+"<br>");
+                    document.write("Nível de LDL: Limítrofe"+"<hr>");
+                    tot_l += 1;
+                }
+                else if (159 < ldl && ldl <= 189){
+                    document.write("Paciente: "+nome+"<br>");
+                    document.write("LDL: "+ldl+"<br>");
+                    document.write("Nível de LDL: Alto"+"<hr>");
+                    tot_a += 1;
+                }
+                else if (ldl <= 190){
+                    document.write("Paciente: "+nome+"<br>");
+                    document.write("LDL: "+ldl+"<br>");
+                    document.write("Nível de LDL: Muito Alto"+"<hr>");
+                    tot_ma += 1;
+                }
+                repet = prompt("Deseja continuar: ","");
+            }
+            document.write("Total de LDL ótimo: "+tot_o+"<br>");
+            document.write("Total de LDL desejável: "+tot_d+"<br>");
+            document.write("Total de LDL limítrofe: "+tot_l+"<br>");
+            document.write("Total de LDL alto: "+tot_a+"<br>");
+            document.write("Total de LDL muito alto: "+tot_ma);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

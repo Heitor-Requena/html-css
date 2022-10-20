@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*
+    id em HTML é igual a # no CSS (Só pode um elemento por página)
+    class em HTMl é igual a . no CSS
+*/
+
+body{
+    background-color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#principal{
+    color: darkred;
+    text-align: center;
+    background-color: lightcoral;
+}
+
+
+h1{
+    color: rgb(107, 67, 14);
+}
+
+h2{
+    color: rgb(151, 100, 34);
+}
+
+.basico{
+    color: green;
+    font-weight: 900;
+}
+
+.intermediario{
+    color: goldenrod;
+}
+
+.avancado{
+    color: red;
+    font-style: oblique;
+    font-style: italic;
+}
+
+.sublinhado{
+    text-decoration: underline;
+}
+
+.local{
+    text-align: right;
+}

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body{
+    background-image: url("espaco.jpg"), url();
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;;
+    background-color: gray;
+}
+
+div{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+p{
+    text-align: center;
+}

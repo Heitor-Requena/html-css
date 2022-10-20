@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2? family= Amatic+SC & family= Gaegu:wght@300;400 & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Amatic+SC & family= Barlow:wght@100 & family= Gaegu:wght@300;400 & display=swap');
+@font-face {
+    font-family: 'love';
+    src: url(lovelarry.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'Gaegu', cursive;
+    font-weight: lighter;
+    color: red;
+}
+
+p{
+    font-family: 'love', sans-serif;
+}

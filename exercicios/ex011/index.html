@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mídias em HTML5</title>
+    </head>
+    <body>
+        <h1>Usando Diferentes Tipos De Mídias</h1>
+        <h2>Imagens Dinâmicas</h2>
+        <p>Dependendo da tela do usuario a imagem pode ser mair ou menor por isso usamos a tag picture.</p>
+        <picture>
+            <!--DEVE SE COLOCAR PRIMEIRO O SOURCE COM A MENOR LARGURA DE TELA, PARA VERIFICAR MELHOR.-->
+            <source media="(max-width: 750px)" srcset="imagens/img-p.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="imagens/img-m.png" type="image/png">
+            <img src="imagens/img-g.png" alt="Imagem Grande">
+        </picture>
+        <h2>Aúdios em HTML</h2>
+        <audio src="midia/happy-mistake.mp3" controls autoplay loop></audio>
+        <audio controls preload="metadata">
+            <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+            <p>O navegador não suporta esse tipo de aúdio</p>
+        </audio>
+    </body>
+</html>

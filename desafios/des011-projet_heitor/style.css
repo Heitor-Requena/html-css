@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(132, 225, 173);
+    text-align: justify;
+    margin: 0px;
+}
+
+/*MENU / CABECALHO*/
+
+header{
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(180deg, rgb(59, 213, 128), rgb(26, 91, 55));
+    margin: 0px;
+}
+
+header > p{
+    color: rgba(255, 255, 255, 0.60);
+}
+
+header > nav{
+    text-align: left;
+    padding: 10px;
+}
+
+header > nav > a{
+    color: rgba(255, 255, 255, 0.694);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 14px;
+}
+
+header > nav > a:hover{
+    background-color: rgba(100, 220, 150, 0.50);
+    border-radius: 5px;
+}
+
+/*CONTEUDO*/
+
+main{
+    background-color: white;
+    width: 810px;
+    margin: auto;
+    padding: 0px 15px;
+    padding-top: 10px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+article{
+    background-color: white;
+    width: 800px;
+    margin: auto;
+}
+
+h2{
+    font-family: "idroid";
+    color: rgb(32, 96, 61);
+    margin: 5px;
+}
+
+h3{
+    font-family: "idroid";
+    color: rgb(32, 96, 61);
+    background-image: linear-gradient(90deg, #84E1AD, white);
+    margin: 5px;
+}
+
+p{
+    margin: 15px 5px;
+}
+
+p > a{
+    background-color: #84E1AD;
+    text-decoration: none;
+    padding: 2px;
+    font-weight: bold;
+    color: rgb(26, 91, 55);
+}
+
+p > a:hover{
+    text-decoration: underline;
+}
+
+img{
+    text-align: center;
+}
+
+iframe{
+    margin: auto;
+}
+
+/*QUER APRENDER MAIS*/
+
+aside{
+    background-color: rgb(197, 240, 220);
+    border-radius: 10px;
+    margin: 5px 5px 15px 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+h4{
+    color: white;
+    background-color: rgb(47, 168, 102);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+}
+
+aside > ul{
+    display: inline-block;
+    margin-right: 150px;
+}
+
+aside > p > a{
+    color: rgb(32, 96, 61);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/*RODAPE*/
+
+p > span{
+    color: rgb(26, 91, 55);
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+    background-color: darkgreen;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+footer > p{
+    color: rgb(197, 235, 213, 0.6);
+    font-style: italic;
+}
+
+footer > p > span{
+    color: white;
+}
