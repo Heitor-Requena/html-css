@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex-19</title>
+</head>
+<body>
+	<!--FORMULARIO DE INFORMACOES DA FOTO-->>
+	<form name="info_foto">
+		Codígo Foto <input type="text" name="codtxt">
+		<br>
+		Nome Foto <input type="text" name="fototxt">
+		<input type="button" value="gravar" onclick="gravar()">  <!--CRIAR UMA FUNÇAO GRAVAR2 E COLOCAR O VALOR GRAVADO JUNTO COM O LISTAR NO FINAL-->
+	</form>
+
+	<!--FORMULARIO DE INFORMACOES DO USUARIO-->
+	<form name="formu2">
+		Nome Cliente <input type="text" name="nometxt">
+		<br>
+		Cod Foto <input type="text" name="codvertxt">
+		<input type="button" value="Localizar" onclick="localizar()">
+		<br>
+		<input type="button" value="Gravar" onclick="gravar()">
+		<input type="button" value="Listar" onclick="listar()">
+		<br>
+		<textarea name="lista"></textarea>
+	</form>
+
+	<script type="text/javascript">
+		var nomes = new Array(100);
+			codigos = new Array(100);
+			i = j = 0;
+			achei = false
+			texto = "";
+
+		/*FUNCAO PARA MOSTRAR A FOTO QUE O USUARIO ESCOLHEU*/
+		function localizar(){
+			
+			if (info_foto.codtxt.value == "1"){
+				document.write("<img src='festa.jpg'>");
+			}
+		}
+
+		/*GRAVA AS INFOMACOES NOS ARRAY*/
+		function gravar(){
+			achei = false
+			/*
+			1 Verificar se é igual
+			2 Se for igual não deixar gravar
+			3 Caso seja diferente deixar gravar
+			*/
+			for (j = 0; j < i; j++) {
+				if (formu2.nometxt.value == nomes[j]){
+					achei = true;
+				}
+			}
+			if (achei == true){
+				alert("Esse nome já foi cadastrado");
+			}
+			else{
+				codigos[i] = formu2.codvertxt.value;
+				nomes[i] = formu2.nometxt.value; 
+				alert("Cadastrado com sucesso");
+				i++
+			}
+		}
+
+		/*ESCREVE AS INFORMACOES DO USUARIO NO TEXTAREA*/
+		function listar(){
+			texto = "";
+			for (var j = 0; j < i; j++) {
+				texto = texto + nomes[j] + " " + codigos[j] + "\n"; 
+			}
+			formu2.lista.value = texto;
+		}
+	</script>
+</body>
+</html>
