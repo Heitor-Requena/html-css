@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        varcodprod=new Array(100);
+        nomefoto=new Array(100);
+        j=i=w=0;
+        nomecli=new Array(100);
+        codprodc=new Array(100);
+        function localizar(){ 
+            var achou=0;
+            for(j=0;j<i;j++){
+                if(codprod[j]==foc.txtcodx.value){
+                    achou=1;
+                    foc.foto.src=nomefoto[j]+".jpg";
+                }
+            }
+            if(achou==0){
+                alert(" foto não existe");
+            }
+        }
+
+        function gravarcli(){
+            nomecli[w]=foc.txtnomec.value;
+            codprodc[w]=foc.txtcodx.value;
+            w++;
+            alert(" cliente cadastrado com sucesso");
+        }
+
+        function listacli(){
+            var texto="";
+            for(j=0;j<w;j++){
+                texto=texto+" nome cliente "+nomecli[j]+ " codprod "+codprodc[j]+ "\n";
+            }
+            fol.lista.value=texto;
+        }
+
+        function gravarprod(){
+            codprod[i]=fop.txtcod.value;
+            nomefoto[i]=fop.txtnome.value;
+            fop.txtcod.value="";
+            fop.txtnome.value="";	
+            i++;
+            alert(" incluido com sucesso!!");
+        }
+
+        function show_prod(){
+            document.getElementById("d2").style.display="block"
+            document.getElementById("d3").style.display="none"
+
+        }
+        
+        function show_cli(){
+            document.getElementById("d3").style.display="block"
+            document.getElementById("d2").style.display="none"
+        }
+    </script>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+
+        .teste{
+            background-color: lightblue;
+            border-radius: 5px;
+        }
+
+        #d2{
+            display: none;
+            margin: auto;
+            height: 110px;
+            width: 200px;
+            background-color: lightgray;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4) ;
+        }
+
+        #d2 > form{
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+
+        #d3{
+            display: none;
+            margin: auto;
+            height: 150px;
+            width: 200px;
+            background-color: lightgray;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4) ;
+        }
+
+        #d3 > form{
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <form>
+            <input type="button" value="produto" onclick="show_prod()" class="teste">
+            <input type="button" value="cliente" onclick="show_cli()" class="teste">
+        </form>
+    </div>
+
+    <div id="d2">
+        <form name=fop>
+            CODPROD <input type=text name=txtcod>
+            <br>
+            NOME DA FOTO <input type=text name=txtnome>
+            <br>
+            <input type=button value="gravar" onclick="gravarprod()">
+        </form>
+    </div>
+
+    <br>
+    
+    <div id="d3">
+        <form name=foc>
+            NOME CLIENTE <input type=text name=txtnomec>
+            <br>
+            CODPROD <input type=text name=txtcodx>
+            <input type=button value="Localizar" onclick="localizar()">
+            <br>
+            <imgsrc="" name=foto width=300 height=300>
+            <br>
+            <input type=button value="gravar" onclick="gravarcli()">
+            <input type=button value="Listar" onclick="listacli()">
+        </form>
+    </div>
+
+    <form name=fol>
+        <textareaname=lista></textarea>
+    </form>
+</body>
+</html>
