@@ -9,36 +9,49 @@ body{
     text-align: left;
 }
 
-main > header{
+header{
+    padding: 50px;
     background-color: black;
     color: white;
     text-align: center;
 }
 
-main > header > h1 {
+header > h1 {
     text-align: center;
+    text-decoration: overline;
+    font-size: 2.5em;
 }
 
 section.normal{
-    color: blue;
+    color: black;
 }
 
-section.imagem1{
+section#primeiraimg{
     color: white;
     background: green url(imagens/background001.jpg) right bottom no-repeat fixed;
     background-size: cover;
 }
 
-section.imagem2{
+section#segundaimg{
     color: black;
     background: gray url(imagens/background002.jpg) center center no-repeat fixed;
     background-size: cover;
 }
 
+section > p{
+    margin: 10px;
+    padding: 10px;
+    font-size: 2em;
+    line-height: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 footer{
+    padding: 10px;
     background-color: black;
     color: white;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 a {
