@@ -2,9 +2,11 @@
 
 *{
     margin: 0px;
+    padding: 0px;
 }
 
-body{
+html, body{
+    min-width: 100vh;
     background-color: white;
     text-align: left;
 }
@@ -14,6 +16,7 @@ header{
     background-color: black;
     color: white;
     text-align: center;
+    font-variant: small-caps;
 }
 
 header > h1 {
@@ -22,8 +25,25 @@ header > h1 {
     font-size: 2.5em;
 }
 
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+}
+
+section > p{
+    font-size: 2em;
+    line-height: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 section.normal{
     color: black;
+}
+
+section.imagem > p{
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    width: 450px;
 }
 
 section#primeiraimg{
@@ -36,14 +56,6 @@ section#segundaimg{
     color: black;
     background: gray url(imagens/background002.jpg) center center no-repeat fixed;
     background-size: cover;
-}
-
-section > p{
-    margin: 10px;
-    padding: 10px;
-    font-size: 2em;
-    line-height: 1.5em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 footer{
