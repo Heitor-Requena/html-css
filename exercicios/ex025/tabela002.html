@@ -17,6 +17,15 @@
 
         }
 
+        caption{
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
+
         .num{
             text-align: right;
         }
@@ -37,11 +46,12 @@
 </head>
 <body>
     <table>
+        <caption>Titulo / Legenda da tabela</caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 70px;">População</th>
             </tr>
         </thead>
 
@@ -85,7 +95,7 @@
 
         <tfoot>
             <tr>
-                <th colspan="2">Total de Habitantes</th>
+                <th colspan="2" scope="row">Total de Habitantes</th>
                 <td class="num"><strong>125.210.633</strong></td>
             </tr>
         </tfoot>
